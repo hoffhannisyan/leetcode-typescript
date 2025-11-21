@@ -1,0 +1,23 @@
+{
+  "name": "leetcode-typescript",
+  "version": "1.0.0",
+  "description": "LeetCode problems solutions implemented in TypeScript",
+  "scripts": {
+    "dev": "tsx src/main.ts"
+  },
+  "keywords": [
+    "leetcode",
+    "algorithms",
+    "data-structures",
+    "typescript",
+    "coding-practice"
+  ],
+  "author": "Hovhannes Hovhannisyan",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3"
+  }
+}
