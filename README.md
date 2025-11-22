@@ -2,15 +2,6 @@
 
 A growing collection of LeetCode problem solutions in TypeScript. New solutions are added regularly.
 
-## Structure
-```
-src/
-├── 001-100/    # Problems 1-100
-├── 101-200/    # Problems 101-200
-├── 201-300/    # Problems 201-300...
-└── main.ts     # Test runner
-```
-
 ## Usage
 ```bash
 # Install dependencies
@@ -29,11 +20,15 @@ Each solution includes:
 
 ## Testing
 
-All solutions are imported in `main.ts` with test functions for each problem. To test a specific problem, comment out other test calls and run only the one you need.
-
+Tests are organized by problem ranges. To run specific ranges, comment out imports in `main.ts`:
 ```typescript
-/* main.ts */
-testTwoSum();
-// testSymmetricTree();
-// ...
+import { runTests as runTests001_100 } from "@/001-100/tests.js";
+import { runTests as runTests101_200 } from "@/101-200/tests.js";
+// ...other imports
+
+runTests001_100();
+runTests101_200();
+// ...other test calls
 ```
+
+Or comment out specific tests in range's `tests.ts` file.
