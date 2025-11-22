@@ -6,12 +6,14 @@ import {
 } from "@/101-200/0101-symmetric-tree.js";
 import { isHappy } from "./201-300/0202-happy-number";
 import { sumOfLeftLeaves } from "./401-500/0404-sum-of-left-leaves";
+import { divisorGame } from "./1001-1100/1025-divisor-game";
 
 // Run tests
 testTwoSum();
 testSymmetricTree();
 testHappyNumber();
 testSumOfLeftLeaves();
+testDivisorGame();
 
 function testTwoSum() {
   console.log("=== #1 Two Sum ===");
@@ -62,4 +64,12 @@ function testSumOfLeftLeaves() {
   // Example 2: root = [1]
   const tree2 = new TreeNode(1);
   console.log("Example 2:", sumOfLeftLeaves(tree2)); // Expected: 0
+}
+
+function testDivisorGame() {
+  console.log("=== #1025 Divisor Game ===");
+  console.log("Example 1 (n=2):", divisorGame(2));
+  console.log("Example 2 (n=3):", divisorGame(3));
+  console.log("Additional test (n=1):", divisorGame(1));
+  console.log("Additional test (n=4):", divisorGame(4));
 }
