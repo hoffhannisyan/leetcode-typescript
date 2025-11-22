@@ -7,6 +7,7 @@ import {
 import { isHappy } from "./201-300/0202-happy-number";
 import { sumOfLeftLeaves } from "./401-500/0404-sum-of-left-leaves";
 import { divisorGame } from "./1001-1100/1025-divisor-game";
+import { dayOfYear } from "./1101-1200/1154-day-of-the-year";
 
 // Run tests
 testTwoSum();
@@ -14,6 +15,7 @@ testSymmetricTree();
 testHappyNumber();
 testSumOfLeftLeaves();
 testDivisorGame();
+testDayOfYear();
 
 function testTwoSum() {
   console.log("=== #1 Two Sum ===");
@@ -72,4 +74,12 @@ function testDivisorGame() {
   console.log("Example 2 (n=3):", divisorGame(3));
   console.log("Additional test (n=1):", divisorGame(1));
   console.log("Additional test (n=4):", divisorGame(4));
+}
+
+function testDayOfYear() {
+  console.log("\n=== #1154 Day of the Year ===");
+  console.log("Example 1 (2019-01-09):", dayOfYear("2019-01-09"));
+  console.log("Example 2 (2019-02-10):", dayOfYear("2019-02-10"));
+  console.log("Leap year test (2020-03-01):", dayOfYear("2020-03-01"));
+  console.log("Year end test (2019-12-31):", dayOfYear("2019-12-31"));
 }
