@@ -1,10 +1,12 @@
 import { twoSum } from "@/001-100/0001-two-sum.js";
 import { addTwoNumbers, ListNode } from "@/001-100/0002-add-two-numbers.js";
 import { listToArray } from "@/utils/helpers.js";
+import { lengthOfLongestSubstring } from "@/001-100/0003-longest-substring-without-repeating-characters.js";
 
 export function runTests() {
   testTwoSum();
   testAddTwoNumbers();
+  testLongestSubstringWithoutRepeatingCharacters();
 }
 
 function testTwoSum() {
@@ -40,4 +42,11 @@ function testAddTwoNumbers() {
     new ListNode(9, new ListNode(9, new ListNode(9)))
   );
   console.log("Example 3:", listToArray(addTwoNumbers(l1_ex3, l2_ex3)));
+}
+
+function testLongestSubstringWithoutRepeatingCharacters() {
+  console.log("\n=== #3 Longest Substring Without Repeating Characters ===");
+  console.log("Example 1:", lengthOfLongestSubstring("abcabcbb"));
+  console.log("Example 2:", lengthOfLongestSubstring("bbbbb"));
+  console.log("Example 3:", lengthOfLongestSubstring("pwwkew"));
 }
