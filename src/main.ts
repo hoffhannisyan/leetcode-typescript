@@ -8,6 +8,7 @@ import { isHappy } from "./201-300/0202-happy-number";
 import { sumOfLeftLeaves } from "./401-500/0404-sum-of-left-leaves";
 import { divisorGame } from "./1001-1100/1025-divisor-game";
 import { dayOfYear } from "./1101-1200/1154-day-of-the-year";
+import { addTwoNumbers, ListNode } from "./001-100/0002-add-two-numbers";
 
 // Run tests
 testTwoSum();
@@ -16,6 +17,7 @@ testHappyNumber();
 testSumOfLeftLeaves();
 testDivisorGame();
 testDayOfYear();
+testAddTwoNumbers();
 
 function testTwoSum() {
   console.log("=== #1 Two Sum ===");
@@ -82,4 +84,45 @@ function testDayOfYear() {
   console.log("Example 2 (2019-02-10):", dayOfYear("2019-02-10"));
   console.log("Leap year test (2020-03-01):", dayOfYear("2020-03-01"));
   console.log("Year end test (2019-12-31):", dayOfYear("2019-12-31"));
+}
+
+function testAddTwoNumbers() {
+  console.log("\n=== #2 Add Two Numbers ===");
+
+  // Example 1: [2,4,3] + [5,6,4] = [7,0,8]
+  const l1_ex1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+  const l2_ex1 = new ListNode(5, new ListNode(6, new ListNode(4)));
+  console.log("Example 1:", listToArray(addTwoNumbers(l1_ex1, l2_ex1)));
+
+  // Example 2: [0] + [0] = [0]
+  const l1_ex2 = new ListNode(0);
+  const l2_ex2 = new ListNode(0);
+  console.log("Example 2:", listToArray(addTwoNumbers(l1_ex2, l2_ex2)));
+
+  // Example 3: [9,9,9,9,9,9,9] + [9,9,9,9] = [8,9,9,9,0,0,0,1]
+  const l1_ex3 = new ListNode(
+    9,
+    new ListNode(
+      9,
+      new ListNode(
+        9,
+        new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9))))
+      )
+    )
+  );
+  const l2_ex3 = new ListNode(
+    9,
+    new ListNode(9, new ListNode(9, new ListNode(9)))
+  );
+  console.log("Example 3:", listToArray(addTwoNumbers(l1_ex3, l2_ex3)));
+}
+
+function listToArray(head: ListNode | null): number[] {
+  const result: number[] = [];
+  let current = head;
+  while (current !== null) {
+    result.push(current.val);
+    current = current.next;
+  }
+  return result;
 }
