@@ -1,20 +1,36 @@
 {
   "name": "leetcode-typescript",
   "version": "1.0.0",
-  "description": "LeetCode problems solutions implemented in TypeScript",
-  "scripts": {
-    "dev": "tsx src/main.ts"
-  },
+  "description": "Clean TypeScript solutions for LeetCode problems with detailed explanations and time/space complexity analysis. Perfect for interview preparation and learning algorithms.",
   "keywords": [
     "leetcode",
+    "typescript",
     "algorithms",
     "data-structures",
-    "typescript",
-    "coding-practice"
+    "leetcode-solutions",
+    "coding-interview",
+    "interview-preparation",
+    "coding-practice",
+    "dsa",
+    "problem-solving"
   ],
   "author": "Hovhannes Hovhannisyan",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoffhannisyan/leetcode-typescript.git"
+  },
+  "homepage": "https://github.com/hoffhannisyan/leetcode-typescript#readme",
+  "bugs": {
+    "url": "https://github.com/hoffhannisyan/leetcode-typescript/issues"
+  },
+  "scripts": {
+    "dev": "tsx src/main.ts"
+  },
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "devDependencies": {
     "@types/node": "^24.10.1",
     "tsx": "^4.19.2",
