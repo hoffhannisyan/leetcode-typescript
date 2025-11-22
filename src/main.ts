@@ -5,11 +5,13 @@ import {
   TreeNode,
 } from "@/101-200/0101-symmetric-tree.js";
 import { isHappy } from "./201-300/0202-happy-number";
+import { sumOfLeftLeaves } from "./401-500/0404-sum-of-left-leaves";
 
 // Run tests
 testTwoSum();
 testSymmetricTree();
 testHappyNumber();
+testSumOfLeftLeaves();
 
 function testTwoSum() {
   console.log("=== #1 Two Sum ===");
@@ -44,4 +46,20 @@ function testHappyNumber() {
   console.log("\n=== #202 Happy Number ===");
   console.log("Example 1 (n=19):", isHappy(19));
   console.log("Example 2 (n=2):", isHappy(2));
+}
+
+function testSumOfLeftLeaves() {
+  console.log("\n=== #404 Sum of Left Leaves ===");
+
+  // Example 1: root = [3,9,20,null,null,15,7]
+  const tree1 = new TreeNode(3);
+  tree1.left = new TreeNode(9);
+  tree1.right = new TreeNode(20);
+  tree1.right.left = new TreeNode(15);
+  tree1.right.right = new TreeNode(7);
+  console.log("Example 1:", sumOfLeftLeaves(tree1)); // Expected: 24
+
+  // Example 2: root = [1]
+  const tree2 = new TreeNode(1);
+  console.log("Example 2:", sumOfLeftLeaves(tree2)); // Expected: 0
 }
